@@ -5,15 +5,26 @@
   
 
   
-  <title>Hexo</title>
+  <title>树莓派+Opencv（二）中文字库 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="上一次实验完成了Opencv的安装以及图像的简单处理，现在在此基础上完成添加中文字的任务。 一、在字库文件中找到自己的名字 新建一个txt文本文件，写上名字学号，另存为，编码格式选择acsi。如何获得中文的的点阵位置呢，这里我们需要一个强大的工具，UltraEdit。使用UD打开之前创建的txt文件：打开点阵汉字查看程序，打开HZKf2424字库文件，在工具栏选择望远镜图标，也就是搜索图标，搜索E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派+Opencv（二）中文字库">
+<meta property="og:url" content="http://yoursite.com/2019/08/21/树莓派-Opencv（二）中文字库/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="上一次实验完成了Opencv的安装以及图像的简单处理，现在在此基础上完成添加中文字的任务。 一、在字库文件中找到自己的名字 新建一个txt文本文件，写上名字学号，另存为，编码格式选择acsi。如何获得中文的的点阵位置呢，这里我们需要一个强大的工具，UltraEdit。使用UD打开之前创建的txt文件：打开点阵汉字查看程序，打开HZKf2424字库文件，在工具栏选择望远镜图标，也就是搜索图标，搜索E">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181209220520265.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25hb2htdXJkZXJlcg==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181209220657556.PNG">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181209220708349.PNG">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181209220734127.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25hb2htdXJkZXJlcg==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2018120922085151.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25hb2htdXJkZXJlcg==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181209221106925.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25hb2htdXJkZXJlcg==,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-08-21T05:31:54.614Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="树莓派+Opencv（二）中文字库">
+<meta name="twitter:description" content="上一次实验完成了Opencv的安装以及图像的简单处理，现在在此基础上完成添加中文字的任务。 一、在字库文件中找到自己的名字 新建一个txt文本文件，写上名字学号，另存为，编码格式选择acsi。如何获得中文的的点阵位置呢，这里我们需要一个强大的工具，UltraEdit。使用UD打开之前创建的txt文件：打开点阵汉字查看程序，打开HZKf2424字库文件，在工具栏选择望远镜图标，也就是搜索图标，搜索E">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20181209220520265.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25hb2htdXJkZXJlcg==,size_16,color_FFFFFF,t_70">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,9 +71,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-树莓派-Opencv（二）中文字库" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-树莓派-Opencv（二）中文字库" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/08/21/树莓派-Opencv（二）中文字库/" class="article-date">
   <time datetime="2019-08-21T05:30:48.000Z" itemprop="datePublished">2019-08-21</time>
@@ -75,8 +84,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/21/树莓派-Opencv（二）中文字库/">树莓派+Opencv（二）中文字库</a>
+    <h1 class="article-title" itemprop="name">
+      树莓派+Opencv（二）中文字库
     </h1>
   
 
@@ -105,238 +114,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-树莓派-Opencv（一）图像处理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/21/树莓派-Opencv（一）图像处理/" class="article-date">
-  <time datetime="2019-08-21T05:18:26.000Z" itemprop="datePublished">2019-08-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/21/树莓派-Opencv（一）图像处理/">树莓派+Opencv（一）图像处理</a>
-    </h1>
+    <a href="/2019/08/21/树莓派-Opencv（一）图像处理/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">树莓派+Opencv（一）图像处理</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>1、树莓派上安装配置opencv</strong><br>     我们从 opencv官网下载source文件，得到zip压缩包，这里推荐下载最新版本的Opencv，这里下载的是3.4.3版本，在安装前首先需要安装依赖包，在控制台输入：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br><span class="line">sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev</span><br><span class="line">sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev\然后下载OpenCV3.2.0和OpenCV_contrib-3.2.0，下载需要等待一段时间</span><br></pre></td></tr></table></figure>
-
-<p>之后输入：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">unzip opencv-3.4.3.zip #解压文件</span><br><span class="line">cd opencv-3.4.3 #进入文件夹</span><br><span class="line">mkdir build #创建编译文件夹</span><br><span class="line">cd build #进入</span><br><span class="line">camke .. </span><br><span class="line">sudo make -j1</span><br></pre></td></tr></table></figure>
-
-<p><strong>-j 是使用多少线程进行编译，在Ubuntu虚拟机上由于我设设置的性能较好，可以使用-j8进行编译，也就是8线程，而在树莓派上则是使用的单线程编译，速度会慢很多，但是保证不会死机，一开始使用-j4时到99%时就死机了。如果-j后不加数字，则默认不限制线程编译</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20181203215554580.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25hb2htdXJkZXJlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>编译完成后输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo make install #执行安装</span><br></pre></td></tr></table></figure>
-
-<p>只要过一会就安装完成了。</p>
-<p><strong>2、编写Opencv代码</strong><br>  代码如下：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/core/core.hpp&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/highgui/highgui.hpp&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/opencv.hpp&gt; </span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>; </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv; </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun2</span><span class="params">(Mat)</span></span>; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">	Mat img = imread(<span class="string">"orgin.png"</span>);<span class="comment">//引入源图片文件 </span></span><br><span class="line">	<span class="keyword">if</span> (img.empty()) </span><br><span class="line">	&#123; </span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;<span class="comment">//若没有图片文件，则为退出 </span></span><br><span class="line">	&#125; </span><br><span class="line">	fun2(img);<span class="comment">//将源图片文件传入</span></span><br><span class="line">	fun2() namedWindow(<span class="string">"orgin"</span>);<span class="comment">//新建窗口 </span></span><br><span class="line">	imshow(<span class="string">"orgin"</span>,img);<span class="comment">//在orgin窗口下显示img </span></span><br><span class="line">	namedWindow(<span class="string">"new"</span>); </span><br><span class="line">	waitKey(<span class="number">0</span>); </span><br><span class="line">&#125; </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun2</span><span class="params">(Mat img)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">	Mat element = getStructuringElement(MORPH_RECT, Size(<span class="number">15</span>, <span class="number">15</span>));<span class="comment">//图像处理的主要函数，函数的参数第一个为选择的样式，这里我选择的是MORPH_RECT样式，大小设置为15 </span></span><br><span class="line">	Mat dstimg; erode(img, dstimg, element);<span class="comment">//将源文件进行处理，生成新的图像文件 </span></span><br><span class="line">	imshow(<span class="string">"new"</span>, dstimg); </span><br><span class="line">	imwrite(<span class="string">"new.jpg"</span>, dstimg);<span class="comment">//将处理后的新图像文件保存为new.jpg </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>新建一个文件夹，之后将图像文件和cpp文件放入在同一文件夹内。</p>
-<p><strong>3、运行代码</strong><br> 在树莓派上运行Opencv的代码有点繁琐，首先需要安装cmake gui，使用图形界面会比较方便些，这里在终端直接输入：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get cmake-gui</span><br></pre></td></tr></table></figure>
-
-<p>进行安装。我们开始运行代码。在刚刚的文件夹里新建一个txt文件，这里推荐使用vim，当然也可以使用其他的文本编辑器，取名为CmakeLists.txt。CmakeLists的内容可以到Opencv的安装目录中找到Opencv官方的例子中直接复制过来就可以，不过需要改几个地方。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cmake needs this line</span><br><span class="line">cmake_minimum_required(VERSION 2.8)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> Define project name</span><br><span class="line">project(opencv_example_project)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> Find OpenCV, you may need to set OpenCV_DIR variable</span><br><span class="line"><span class="meta">#</span> to the absolute path to the directory containing OpenCVConfig.cmake file</span><br><span class="line"><span class="meta">#</span> via the command line or GUI</span><br><span class="line">find_package(OpenCV REQUIRED)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> If the package has been found, several variables will</span><br><span class="line"><span class="meta">#</span> be set, you can find the full list with descriptions</span><br><span class="line"><span class="meta">#</span> in the OpenCVConfig.cmake file.</span><br><span class="line"><span class="meta">#</span> Print some message showing some of them</span><br><span class="line">message(STATUS "OpenCV library status:")</span><br><span class="line">message(STATUS "    version: $&#123;OpenCV_VERSION&#125;")</span><br><span class="line">message(STATUS "    libraries: $&#123;OpenCV_LIBS&#125;")</span><br><span class="line">message(STATUS "    include path: $&#123;OpenCV_INCLUDE_DIRS&#125;")</span><br><span class="line"></span><br><span class="line">if(CMAKE_VERSION VERSION_LESS "2.8.11")</span><br><span class="line"><span class="meta">  #</span> Add OpenCV headers location to your include paths</span><br><span class="line"><span class="meta">  include_directories($</span>&#123;OpenCV_INCLUDE_DIRS&#125;)</span><br><span class="line">endif()</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> Declare the executable target built from your sources</span><br><span class="line">add_executable(opencv_example opencvtest.cpp)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> Link your application with OpenCV libraries</span><br><span class="line">target_link_libraries(opencv_example $&#123;OpenCV_LIBS&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>首先是为你的Opencv项目取名，当然如果不想改的话官方给的实例里已经给你取好了，其次就是将<strong>add_executable</strong>中的cpp文件改成自己写的代码的文件名，这样才可以知道编译的是哪个文件。</p>
-<p>接下来就是使用cmake-gui编译了。打开终端，输入：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake-gui</span><br></pre></td></tr></table></figure>
-
-<p>打开cmake-gui后看到界面，源代码处我们选择刚刚创建的文件夹，二进制文件一样也选择刚刚创建的文件夹，点击Add Entry，输入Opencv的安装位置，选择build文件夹，如图：<br><img src="https://img-blog.csdnimg.cn/201812032159534.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25hb2htdXJkZXJlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>接着分别点击Configure和Generate，显示Configure Done和Generate Done就说明成功了。</p>
-<p>回到终端，cd进入刚刚的文件夹，输入：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls #查看生成的可执行文件的名称</span><br></pre></td></tr></table></figure>
-
-<p>接着输入：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./opencv_example</span><br></pre></td></tr></table></figure>
-
-<p>运行。运行结果如下：<br><img src="https://img-blog.csdnimg.cn/20181203220108420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25hb2htdXJkZXJlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/21/树莓派-Opencv（一）图像处理/" data-id="cjzktlsja0000ibt8zrvlph4g" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-基于树莓派平台宿舍人脸智能门锁系统" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/21/基于树莓派平台宿舍人脸智能门锁系统/" class="article-date">
-  <time datetime="2019-08-20T17:18:31.000Z" itemprop="datePublished">2019-08-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/21/基于树莓派平台宿舍人脸智能门锁系统/">基于树莓派平台宿舍人脸智能门锁系统</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1、设计目的"><a href="#1、设计目的" class="headerlink" title="1、设计目的"></a>1、设计目的</h2><p>本报告从树莓派平台入手，分析基于树莓派开发的人脸识别门锁系统的必要性和可行性。</p>
-<h2 id="2、实验详细步骤"><a href="#2、实验详细步骤" class="headerlink" title="2、实验详细步骤"></a>2、实验详细步骤</h2><h3 id="2-1安装Python3"><a href="#2-1安装Python3" class="headerlink" title="2.1安装Python3"></a>2.1安装Python3</h3><p>树莓派自带的Python版本是2.7，本次需要用到Python3<br>。在Linux上安装Python3很简单，只需要执行：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get updata </span><br><span class="line">sudo apt-get install python3</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-2安装Opencv"><a href="#2-2安装Opencv" class="headerlink" title="2.2安装Opencv"></a>2.2安装Opencv</h3><p>安装Python3的OpenCV就比较麻烦，需要对源码进行编译操作。首次安装需要执行：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential git cmake pkg-config -y</span><br><span class="line">sudo apt-get install libjpeg8-dev -y</span><br><span class="line">sudo apt-get install libtiff5-dev -y</span><br><span class="line">sudo apt-get install libjasper-dev -y</span><br><span class="line">sudo apt-get install libpng12-dev -y</span><br><span class="line">sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev -y</span><br><span class="line">sudo apt-get install libgtk2.0-dev -y</span><br><span class="line">sudo apt-get install libatlas-base-dev gfortran -y</span><br></pre></td></tr></table></figure>
-
-<p>之后执行：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /home/pi/Downloads</span><br><span class="line">wget https://github.com/Itseez/opencv/archive/3.4.0.zip</span><br><span class="line">wget https://github.com/Itseez/opencv_contrib/archive/3.4.0.zip</span><br></pre></td></tr></table></figure>
-
-<p>设置编译参数：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /home/pi/Downloads/opencv-3.4.0</span><br><span class="line">mkdir build</span><br><span class="line">cd build</span><br></pre></td></tr></table></figure>
-
-<p>设置cmake参数：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=/home/pi/Downloads/opencv_contrib-3.4.0/modules -D BUILD_EXAMPLES=ON -D WITH_LIBV4L=ON PYTHON3_EXECUTABLE=/usr/bin/python3.5 PYTHON_INCLUDE_DIR=/usr/include/python3.5 PYTHON_LIBRARY=/usr/lib/arm-linux-gnueabihf/libpython3.5m.so PYTHON3_NUMPY_INCLUDE_DIRS=/home/pi/.local/lib/python3.5/site-packages/numpy/core/include ..</span><br></pre></td></tr></table></figure>
-
-<p>最后执行编译：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/pi/Downloads/opencv-3.4.0/build</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
-
-<p>执行完成后，运行安装：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-3安装OpenCV-contrib"><a href="#2-3安装OpenCV-contrib" class="headerlink" title="2.3安装OpenCV-contrib"></a>2.3安装OpenCV-contrib</h3><p>Python3的OpenCV-contrib库的安装就比较容易了，只需要使用pip进行安装：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3 install opencv-contrib-python</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-4收集人脸数据"><a href="#2-4收集人脸数据" class="headerlink" title="2.4收集人脸数据"></a>2.4收集人脸数据</h3><p>首先需要进入到FacialRecognitionProject文件夹中，在该文件夹下创建一个人脸数据存放的文件夹。运行：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir dataset</span><br></pre></td></tr></table></figure>
-
-<p>之后运行01_face_dataset.py。<br>代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">cam = cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line">cam.set(<span class="number">3</span>, <span class="number">640</span>)  <span class="comment"># set video width</span></span><br><span class="line">cam.set(<span class="number">4</span>, <span class="number">480</span>)  <span class="comment"># set video height</span></span><br><span class="line"></span><br><span class="line">face_detector = cv2.CascadeClassifier(<span class="string">'haarcascade_frontalface_default.xml'</span>)</span><br></pre></td></tr></table></figure>
-
-<p>haarcascade_frontalface_default.xml为人脸分类器<br>每个人的录入都需要一个id作为标志</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">face_id = input(<span class="string">'\n enter user id end press &lt;return&gt; ==&gt;  '</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"\n [INFO] Initializing face capture. Look the camera and wait ..."</span>)</span><br></pre></td></tr></table></figure>
-
-<p>运行人脸采集</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line"></span><br><span class="line">    ret, img = cam.read()</span><br><span class="line">    img = cv2.flip(img, <span class="number">-1</span>)  <span class="comment"># flip video image vertically</span></span><br><span class="line">    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)</span><br><span class="line">    faces = face_detector.detectMultiScale(gray, <span class="number">1.3</span>, <span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (x, y, w, h) <span class="keyword">in</span> faces:</span><br><span class="line"></span><br><span class="line">        cv2.rectangle(img, (x, y), (x+w, y+h), (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Save the captured image into the datasets folder</span></span><br><span class="line">        cv2.imwrite(<span class="string">"dataset/User."</span> + str(face_id) + <span class="string">'.'</span> +</span><br><span class="line">                    str(count) + <span class="string">".jpg"</span>, gray[y:y+h, x:x+w])</span><br><span class="line"></span><br><span class="line">        cv2.imshow(<span class="string">'image'</span>, img)</span><br><span class="line">        k = cv2.waitKey(<span class="number">100</span>) &amp; <span class="number">0xff</span>  <span class="comment"># Press 'ESC' for exiting video</span></span><br><span class="line">    <span class="keyword">if</span> k == <span class="number">27</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">elif</span> count &gt;= <span class="number">30</span>:  <span class="comment"># Take 30 face sample and stop video</span></span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">print(<span class="string">"\n [INFO] Exiting Program and cleanup stuff"</span>)</span><br><span class="line">cam.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
-
-<p>运行后，输入id号，然后对着摄像头，稍等一会，等待摄像头采集30张人脸数据后，程序会自动结束。程序会采集人脸，以及眼睛等特征数据。</p>
-<h3 id="2-5训练"><a href="#2-5训练" class="headerlink" title="2.5训练"></a>2.5训练</h3><p>在这里，我们需要创建一个用于存储训练数据的文件夹。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir trainer</span><br></pre></td></tr></table></figure>
-
-<p>接着运行02_face_training.py<br>代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># Path for face image database</span></span><br><span class="line">path = <span class="string">'dataset'</span></span><br></pre></td></tr></table></figure>
-
-<p>创建人脸识别器然后倒入人脸分类器</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">recognizer = cv2.face.LBPHFaceRecognizer_create()</span><br><span class="line">detector = cv2.CascadeClassifier(<span class="string">"haarcascade_frontalface_default.xml"</span>);</span><br></pre></td></tr></table></figure>
-
-<p>获取照片及其标签方法</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getImagesAndLabels</span><span class="params">(path)</span>:</span></span><br><span class="line"></span><br><span class="line">    imagePaths = [os.path.join(path,f) <span class="keyword">for</span> f <span class="keyword">in</span> os.listdir(path)]     </span><br><span class="line">    faceSamples=[]</span><br><span class="line">    ids = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> imagePath <span class="keyword">in</span> imagePaths:</span><br><span class="line"></span><br><span class="line">        PIL_img = Image.open(imagePath).convert(<span class="string">'L'</span>) <span class="comment"># convert it to grayscale</span></span><br><span class="line">        img_numpy = np.array(PIL_img,<span class="string">'uint8'</span>)</span><br><span class="line"></span><br><span class="line">        id = int(os.path.split(imagePath)[<span class="number">-1</span>].split(<span class="string">"."</span>)[<span class="number">1</span>])</span><br><span class="line">        faces = detector.detectMultiScale(img_numpy)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (x,y,w,h) <span class="keyword">in</span> faces:</span><br><span class="line">            faceSamples.append(img_numpy[y:y+h,x:x+w])</span><br><span class="line">            ids.append(id)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> faceSamples,ids</span><br></pre></td></tr></table></figure>
-
-<p>使用人脸识别器来对id1的数据进行训练</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> (<span class="string">"\n [INFO] Training faces. It will take a few seconds. Wait ..."</span>)</span><br><span class="line">faces,ids = getImagesAndLabels(path)</span><br><span class="line">recognizer.train(faces, np.array(ids))</span><br></pre></td></tr></table></figure>
-
-<p>将模型保存为yml文件</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">recognizer.write(<span class="string">'trainer/trainer.yml'</span>) <span class="comment"># recognizer.save() worked on Mac, but not on Pi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Print the numer of faces trained and end program</span></span><br><span class="line">print(<span class="string">"\n [INFO] &#123;0&#125; faces trained. Exiting Program"</span>.format(len(np.unique(ids))))</span><br></pre></td></tr></table></figure>
-
-<p>稍等片刻，训练就完成了，由于是小样本，只有30张，所以训练的很快。训练好的模型保存为yml文件，存储在刚刚创建的trainer目录中。</p>
-<h3 id="2-6人脸识别器"><a href="#2-6人脸识别器" class="headerlink" title="2.6人脸识别器"></a>2.6人脸识别器</h3><p>训练完成后，就可以开始进行识别了。运行03_face_recognition.py。<br>代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br></pre></td></tr></table></figure>
-
-<p>创建人脸识别器并导入训练好的模型和人脸分类器</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">recognizer = cv2.face.LBPHFaceRecognizer_create()<span class="comment">#创建人脸识别器</span></span><br><span class="line">recognizer.read(<span class="string">'trainer/trainer.yml'</span>)<span class="comment">#导入刚刚训练好的模型</span></span><br><span class="line">cascadePath = <span class="string">"haarcascade_frontalface_default.xml"</span></span><br><span class="line">faceCascade = cv2.CascadeClassifier(cascadePath);<span class="comment">#导入人脸分类器</span></span><br></pre></td></tr></table></figure>
-
-<p>设置界面</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">font = cv2.FONT_HERSHEY_SIMPLEX</span><br><span class="line"></span><br><span class="line"><span class="comment">#iniciate id counter</span></span><br><span class="line">id = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># names related to ids: example ==&gt; Marcelo: id=1,  etc</span></span><br><span class="line">names = [<span class="string">'None'</span>, <span class="string">'wcs'</span>] </span><br><span class="line"></span><br><span class="line"><span class="comment"># Initialize and start realtime video capture</span></span><br><span class="line">cam = cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line">cam.set(<span class="number">3</span>, <span class="number">640</span>) <span class="comment"># set video widht</span></span><br><span class="line">cam.set(<span class="number">4</span>, <span class="number">480</span>) <span class="comment"># set video height</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Define min window size to be recognized as a face</span></span><br><span class="line">minW = <span class="number">0.1</span>*cam.get(<span class="number">3</span>)</span><br><span class="line">minH = <span class="number">0.1</span>*cam.get(<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
-
-<p>创建循环，运行人脸识别</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line"></span><br><span class="line">    ret, img =cam.read()</span><br><span class="line">    img = cv2.flip(img, <span class="number">-1</span>) <span class="comment"># Flip vertically</span></span><br><span class="line"></span><br><span class="line">    gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<span class="comment">#将图片转化为灰度图</span></span><br><span class="line"></span><br><span class="line">    faces = faceCascade.detectMultiScale( </span><br><span class="line">        gray,</span><br><span class="line">        scaleFactor = <span class="number">1.2</span>,</span><br><span class="line">        minNeighbors = <span class="number">5</span>,</span><br><span class="line">        minSize = (int(minW), int(minH)),</span><br><span class="line">       )</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(x,y,w,h) <span class="keyword">in</span> faces:</span><br><span class="line"></span><br><span class="line">        cv2.rectangle(img, (x,y), (x+w,y+h), (<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">        id, confidence = recognizer.predict(gray[y:y+h,x:x+w])<span class="comment">#获取预测值</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Check if confidence is less them 100 ==&gt; "0" is perfect match </span></span><br><span class="line">        <span class="keyword">if</span> (confidence &lt; <span class="number">100</span>):</span><br><span class="line">            id = names[id]</span><br><span class="line">            confidence = <span class="string">"  &#123;0&#125;%"</span>.format(round(<span class="number">100</span> - confidence))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            id = <span class="string">"unknown"</span></span><br><span class="line">            confidence = <span class="string">"  &#123;0&#125;%"</span>.format(round(<span class="number">100</span> - confidence))</span><br><span class="line">        </span><br><span class="line">        cv2.putText(img, str(id), (x+<span class="number">5</span>,y<span class="number">-5</span>), font, <span class="number">1</span>, (<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.putText(img, str(confidence), (x+<span class="number">5</span>,y+h<span class="number">-5</span>), font, <span class="number">1</span>, (<span class="number">255</span>,<span class="number">255</span>,<span class="number">0</span>), <span class="number">1</span>)  </span><br><span class="line">    </span><br><span class="line">    cv2.imshow(<span class="string">'camera'</span>,img) </span><br><span class="line"></span><br><span class="line">    k = cv2.waitKey(<span class="number">10</span>) &amp; <span class="number">0xff</span> <span class="comment"># Press 'ESC' for exiting video</span></span><br><span class="line">    <span class="keyword">if</span> k == <span class="number">27</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Do a bit of cleanup</span></span><br><span class="line">print(<span class="string">"\n [INFO] Exiting Program and cleanup stuff"</span>)</span><br><span class="line">cam.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
-
-<p>运行完成后就可以在屏幕上看到结果了。</p>
-<h2 id="3、系统性能测试和分析"><a href="#3、系统性能测试和分析" class="headerlink" title="3、系统性能测试和分析"></a>3、系统性能测试和分析</h2><p>程序运行起来还是比较顺利的，在人像采集的时候，需要看着摄像头，摄像头只有在检测到人脸和眼睛等特征的情况下才会截取。由于是小样本，设置了只有30张样本照片。所以识别率不是很高。在识别的时候识别率最高只有50%+，有时候甚至拿其他人的照片也会被识别出来，不过识别率只有1%-10%。不过在智能门锁的应用上，可以将其设置为识别率超过50%才可以开锁解决误判。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/21/基于树莓派平台宿舍人脸智能门锁系统/" data-id="cjzktlsji0002ibt82ecf1boa" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/19/hello-world/" class="article-date">
-  <time datetime="2019-08-19T13:54:02.086Z" itemprop="datePublished">2019-08-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/19/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/19/hello-world/" data-id="cjzktlsjg0001ibt8q1lmiml5" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
