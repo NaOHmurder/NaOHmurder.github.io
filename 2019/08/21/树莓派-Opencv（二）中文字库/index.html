@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  lang="en">
+<html  lang="zh">
 <head>
     <meta charset="utf-8" />
 
@@ -7,21 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>树莓派+Opencv（二）中文字库 - Hexo</title>
+<title>树莓派+Opencv（二）中文字库 - NaOHmurder</title>
 
 
-    <meta name="description" content="上一次实验完成了Opencv的安装以及图像的简单处理，现在在此基础上完成添加中文字的任务。 一、在字库文件中找到自己的名字 新建一个txt文本文件，写上名字学号，另存为，编码格式选择acsi。如何获得中文的的点阵位置呢，这里我们需要一个强大的工具，UltraEdit。使用UD打开之前创建的txt文件：打开点阵汉字查看程序，打开HZKf2424字库文件，在工具栏选择望远镜图标，也就是搜索图标，搜索E">
+    <meta name="description" content="上一次实验完成了Opencv的安装以及图像的简单处理，现在在此基础上完成添加中文字的任务。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树莓派+Opencv（二）中文字库">
 <meta property="og:url" content="http://yoursite.com/2019/08/21/树莓派-Opencv（二）中文字库/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="上一次实验完成了Opencv的安装以及图像的简单处理，现在在此基础上完成添加中文字的任务。 一、在字库文件中找到自己的名字 新建一个txt文本文件，写上名字学号，另存为，编码格式选择acsi。如何获得中文的的点阵位置呢，这里我们需要一个强大的工具，UltraEdit。使用UD打开之前创建的txt文件：打开点阵汉字查看程序，打开HZKf2424字库文件，在工具栏选择望远镜图标，也就是搜索图标，搜索E">
-<meta property="og:locale" content="en">
+<meta property="og:site_name" content="NaOHmurder">
+<meta property="og:description" content="上一次实验完成了Opencv的安装以及图像的简单处理，现在在此基础上完成添加中文字的任务。">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-21T05:31:54.614Z">
+<meta property="og:updated_time" content="2019-08-21T10:07:21.965Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="树莓派+Opencv（二）中文字库">
-<meta name="twitter:description" content="上一次实验完成了Opencv的安装以及图像的简单处理，现在在此基础上完成添加中文字的任务。 一、在字库文件中找到自己的名字 新建一个txt文本文件，写上名字学号，另存为，编码格式选择acsi。如何获得中文的的点阵位置呢，这里我们需要一个强大的工具，UltraEdit。使用UD打开之前创建的txt文件：打开点阵汉字查看程序，打开HZKf2424字库文件，在工具栏选择望远镜图标，也就是搜索图标，搜索E">
+<meta name="twitter:description" content="上一次实验完成了Opencv的安装以及图像的简单处理，现在在此基础上完成添加中文字的任务。">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -140,7 +140,7 @@ var _hmt = _hmt || [];
                 
                 
                 
-                <a class="navbar-item search" title="Search" href="javascript:;">
+                <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
                 </a>
                 
@@ -164,7 +164,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    10 minutes read (About 1553 words)
+                    10 分钟 读完 (大约 1554 个字)
                 </span>
                 
                 
@@ -178,6 +178,8 @@ var _hmt = _hmt || [];
         </h1>
         <div class="content">
             <p>上一次实验完成了Opencv的安装以及图像的简单处理，现在在此基础上完成添加中文字的任务。</p>
+<a id="more"></a>
+
 <p><strong>一、在字库文件中找到自己的名字</strong></p>
 <p>新建一个txt文本文件，写上名字学号，另存为，编码格式选择acsi。如何获得中文的的点阵位置呢，这里我们需要一个强大的工具，UltraEdit。使用UD打开之前创建的txt文件：<br><img src="https://img-blog.csdnimg.cn/20181209220520265.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25hb2htdXJkZXJlcg==,size_16,color_FFFFFF,t_70" alt="其中E1D4就是点阵位置"><br>打开点阵汉字查看程序，打开HZKf2424字库文件，在工具栏选择望远镜图标，也就是搜索图标，搜索E1D4：<br><img src="https://img-blog.csdnimg.cn/20181209220657556.PNG" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20181209220708349.PNG" alt="在这里插入图片描述"><br>点击ok后出现的第一个字就是要搜索的字：<br><img src="https://img-blog.csdnimg.cn/20181209220734127.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25hb2htdXJkZXJlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <figure class="highlight cpp hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cxcore.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;highgui.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;direct.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;</span><br><span class="line"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> cv;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> CC_SIZE = <span class="hljs-number">16</span>;</span><br><span class="line"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> SAFE_WIDTH = <span class="hljs-number">10</span>;</span><br><span class="line"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> CC_NUMBER = <span class="hljs-number">15</span>;</span><br><span class="line"><span class="hljs-comment">//姓名</span></span><br><span class="line"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> name[<span class="hljs-number">7</span>] = <span class="hljs-string">"嵩"</span>;</span><br><span class="line"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> name_code[<span class="hljs-number">3</span>][<span class="hljs-number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 学号</span></span><br><span class="line"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> id_code[<span class="hljs-number">12</span>][<span class="hljs-number">2</span>] = &#123; &#123; <span class="hljs-number">0xa3</span>, <span class="hljs-number">0xb6</span> &#125;,&#123; <span class="hljs-number">0xa3</span>, <span class="hljs-number">0xb3</span> &#125;,&#123; <span class="hljs-number">0xa3</span>, <span class="hljs-number">0xb1</span> &#125;,&#123; <span class="hljs-number">0xa3</span>, <span class="hljs-number">0xb6</span> &#125;,&#123; <span class="hljs-number">0xa3</span>, <span class="hljs-number">0xb0</span> &#125;,&#123; <span class="hljs-number">0xa3</span>, <span class="hljs-number">0xb7</span> &#125;,&#123; <span class="hljs-number">0xa3</span>, <span class="hljs-number">0xb0</span> &#125;,&#123; <span class="hljs-number">0xa3</span>, <span class="hljs-number">0xb4</span> &#125;,&#123; <span class="hljs-number">0xa3</span>, <span class="hljs-number">0xb0</span> &#125;,&#123; <span class="hljs-number">0xa3</span>, <span class="hljs-number">0xb3</span> &#125;,&#123; <span class="hljs-number">0xa3</span>, <span class="hljs-number">0xb2</span> &#125;,&#123; <span class="hljs-number">0xa3</span>, <span class="hljs-number">0xb5</span> &#125; &#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> mat[<span class="hljs-number">16</span>][<span class="hljs-number">2</span>];</span><br><span class="line"></span><br><span class="line">FILE* HZK16;</span><br><span class="line">IplImage* img;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">get_area_position_codes</span><span class="hljs-params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">get_mat</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a_code, <span class="hljs-keyword">int</span> p_code)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">open_file</span><span class="hljs-params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw_one_cc</span><span class="hljs-params">(<span class="hljs-keyword">int</span> num)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">release</span><span class="hljs-params">()</span></span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	open_file();</span><br><span class="line">	get_area_position_codes();</span><br><span class="line">	<span class="hljs-keyword">int</span> i, j;</span><br><span class="line">	<span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		get_mat(name_code[i][<span class="hljs-number">0</span>], name_code[i][<span class="hljs-number">1</span>]);</span><br><span class="line">		draw_one_cc(i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="hljs-keyword">for</span> (j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">12</span>; ++j)</span><br><span class="line">	&#123;</span><br><span class="line">		get_mat(id_code[j][<span class="hljs-number">0</span>] - <span class="hljs-number">0xa0</span>, id_code[j][<span class="hljs-number">1</span>] - <span class="hljs-number">0xa0</span>);</span><br><span class="line">		draw_one_cc(i + j);</span><br><span class="line">	&#125;</span><br><span class="line">	cvShowImage(<span class="hljs-string">"IMAGE"</span>, img);</span><br><span class="line">	cvWaitKey(<span class="hljs-number">0</span>);</span><br><span class="line">	release();</span><br><span class="line">	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">get_area_position_codes</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; ++i)</span><br><span class="line">		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">2</span>; ++j)</span><br><span class="line">			name_code[i][j] = name[i * <span class="hljs-number">2</span> + j] - <span class="hljs-number">0xa0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">get_mat</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a_code, <span class="hljs-keyword">int</span> p_code)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">long</span> offset;</span><br><span class="line">	offset = (<span class="hljs-number">94</span> * (a_code - <span class="hljs-number">1</span>) + (p_code - <span class="hljs-number">1</span>)) * <span class="hljs-number">32L</span>;</span><br><span class="line">	<span class="hljs-comment">// 读取数据存入数组</span></span><br><span class="line">	fseek(HZK16, offset, SEEK_SET);</span><br><span class="line">	fread(mat, <span class="hljs-number">32</span>, <span class="hljs-number">1</span>, HZK16);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">open_file</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">char</span> pbuf[<span class="hljs-number">100</span>];</span><br><span class="line">	_getcwd(pbuf, <span class="hljs-number">100</span>);</span><br><span class="line">	<span class="hljs-built_in">strcat</span>(pbuf, <span class="hljs-string">"\\HZKf1616.hz"</span>);</span><br><span class="line">	<span class="hljs-comment">// 读取图片</span></span><br><span class="line">	<span class="hljs-keyword">if</span> ((img = cvLoadImage(<span class="hljs-string">"orgin.png"</span>)) == <span class="hljs-literal">NULL</span>)<span class="hljs-built_in">exit</span>(<span class="hljs-number">1</span>);</span><br><span class="line">	<span class="hljs-comment">// 打开字体文件</span></span><br><span class="line">	<span class="hljs-keyword">if</span> ((HZK16 = fopen(pbuf, <span class="hljs-string">"rb"</span>)) == <span class="hljs-literal">NULL</span>)<span class="hljs-built_in">exit</span>(<span class="hljs-number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw_one_cc</span><span class="hljs-params">(<span class="hljs-keyword">int</span> num)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">int</span> width, height;</span><br><span class="line">	width = img-&gt;width;</span><br><span class="line">	height = img-&gt;height;</span><br><span class="line">	<span class="hljs-keyword">int</span> start_x, start_y, size, current_start_x, current_start_y;</span><br><span class="line">	size = CC_SIZE + SAFE_WIDTH;</span><br><span class="line">	start_x = width - CC_NUMBER * size;</span><br><span class="line">	start_y = height - CC_SIZE - SAFE_WIDTH;</span><br><span class="line"></span><br><span class="line">	CvScalar cs;</span><br><span class="line">	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">16</span>; ++i)</span><br><span class="line">		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">2</span>; ++j)</span><br><span class="line">			<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k = <span class="hljs-number">0</span>; k &lt; <span class="hljs-number">8</span>; k++)</span><br><span class="line">				<span class="hljs-keyword">if</span> (mat[i][j] &amp; (<span class="hljs-number">0x80</span> &gt;&gt; k))</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="hljs-built_in">cout</span> &lt;&lt; mat[i][j] &lt;&lt; <span class="hljs-built_in">endl</span>;</span><br><span class="line">					current_start_x = j * <span class="hljs-number">8</span> + k + start_x + size * num;</span><br><span class="line">					current_start_y = start_y + i;</span><br><span class="line">					cs = cvGet2D(img, current_start_y, current_start_x);</span><br><span class="line">					cs.val[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;<span class="hljs-comment">//B</span></span><br><span class="line">					cs.val[<span class="hljs-number">1</span>] = <span class="hljs-number">69</span>;<span class="hljs-comment">//G</span></span><br><span class="line">					cs.val[<span class="hljs-number">2</span>] = <span class="hljs-number">139</span>;<span class="hljs-comment">//R</span></span><br><span class="line">					cvSet2D(img, current_start_y, current_start_x, cs);</span><br><span class="line">				&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">release</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	cvReleaseImage(&amp;img);</span><br><span class="line">	fclose(HZK16);</span><br><span class="line">	img = <span class="hljs-literal">NULL</span>;</span><br><span class="line">	HZK16 = <span class="hljs-literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -200,7 +202,7 @@ var _hmt = _hmt || [];
 
 <div class="card">
     <div class="card-content">
-        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
         <div class="buttons is-centered">
             
                 
@@ -255,7 +257,7 @@ var _hmt = _hmt || [];
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
     
         
 <div class="card widget">
@@ -264,22 +266,18 @@ var _hmt = _hmt || [];
             <div class="level-item has-text-centered" style="flex-shrink: 1">
                 <div>
                     
-                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Your name">
+                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Manuel Wu">
                     
                     
                     <p class="is-size-4 is-block">
-                        Your name
+                        Manuel Wu
                     </p>
                     
-                    
-                    <p class="is-size-6 is-block">
-                        Your title
-                    </p>
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Your location</span>
+                        <span>Hainan Haikou</span>
                     </p>
                     
                 </div>
@@ -289,7 +287,7 @@ var _hmt = _hmt || [];
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Posts
+                        文章
                     </p>
                     <p class="title has-text-weight-normal">
                         4
@@ -299,7 +297,7 @@ var _hmt = _hmt || [];
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categories
+                        分类
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -309,7 +307,7 @@ var _hmt = _hmt || [];
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tags
+                        标签
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -319,7 +317,7 @@ var _hmt = _hmt || [];
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://github.com/ppoffice" target="_blank">
-                Follow</a>
+                关注我</a>
         </div>
         
         
@@ -347,13 +345,6 @@ var _hmt = _hmt || [];
             </a>
             
             <a class="level-item button is-white is-marginless" target="_blank"
-                title="Dribbble" href="https://dribbble.com">
-                
-                <i class="fab fa-dribbble"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank"
                 title="RSS" href="/">
                 
                 <i class="fas fa-rss"></i>
@@ -373,7 +364,7 @@ var _hmt = _hmt || [];
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Links
+            链接
         </h3>
         <ul class="menu-list">
         
@@ -411,7 +402,7 @@ var _hmt = _hmt || [];
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categories
+                分类
             </h3>
             <ul class="menu-list">
             
@@ -429,7 +420,7 @@ var _hmt = _hmt || [];
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            最新文章
         </h3>
         
         <article class="media">
@@ -516,14 +507,14 @@ var _hmt = _hmt || [];
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            归档
         </h3>
         <ul class="menu-list">
         
         <li>
             <a class="level is-marginless" href="/archives/2019/08/">
                 <span class="level-start">
-                    <span class="level-item">August 2019</span>
+                    <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">4</span>
@@ -540,7 +531,7 @@ var _hmt = _hmt || [];
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                标签
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
@@ -564,7 +555,7 @@ var _hmt = _hmt || [];
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            最新文章
         </h3>
         
         <article class="media">
@@ -651,14 +642,14 @@ var _hmt = _hmt || [];
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            归档
         </h3>
         <ul class="menu-list">
         
         <li>
             <a class="level is-marginless" href="/archives/2019/08/">
                 <span class="level-start">
-                    <span class="level-item">August 2019</span>
+                    <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">4</span>
@@ -675,7 +666,7 @@ var _hmt = _hmt || [];
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                标签
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
@@ -743,7 +734,7 @@ var _hmt = _hmt || [];
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
-<script>moment.locale("en");</script>
+<script>moment.locale("zh-CN");</script>
 
 <script>
 var IcarusThemeSettings = {
@@ -824,7 +815,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
 
-<a id="back-to-top" title="Back to Top" href="javascript:;">
+<a id="back-to-top" title="回到顶端" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
@@ -851,7 +842,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox ins-search">
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么..." />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -863,11 +854,11 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
-                PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
             },
             CONTENT_URL: '/content.json',
         };
