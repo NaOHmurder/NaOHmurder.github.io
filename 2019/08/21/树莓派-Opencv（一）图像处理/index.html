@@ -10,18 +10,19 @@
 <title>树莓派+Opencv（一）图像处理 - NaOHmurder</title>
 
 
-    <meta name="description" content="1、树莓派上安装配置opencv     我们从 opencv官网下载source文件，得到zip压缩包，这里推荐下载最新版本的Opencv，这里下载的是3.4.3版本，在安装前首先需要安装依赖包，在控制台输入： 123sudo apt-get install build-essentialsudo apt-get install cmake git libgtk2.0-dev pkg-confi">
+    <meta name="description" content="通过安装在树莓派上的Opencv来进行图像处理">
+<meta name="keywords" content="树莓派,Opencv">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树莓派+Opencv（一）图像处理">
 <meta property="og:url" content="http://yoursite.com/2019/08/21/树莓派-Opencv（一）图像处理/index.html">
 <meta property="og:site_name" content="NaOHmurder">
-<meta property="og:description" content="1、树莓派上安装配置opencv     我们从 opencv官网下载source文件，得到zip压缩包，这里推荐下载最新版本的Opencv，这里下载的是3.4.3版本，在安装前首先需要安装依赖包，在控制台输入： 123sudo apt-get install build-essentialsudo apt-get install cmake git libgtk2.0-dev pkg-confi">
+<meta property="og:description" content="通过安装在树莓派上的Opencv来进行图像处理">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-21T10:05:52.090Z">
+<meta property="og:updated_time" content="2019-09-09T12:58:14.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="树莓派+Opencv（一）图像处理">
-<meta name="twitter:description" content="1、树莓派上安装配置opencv     我们从 opencv官网下载source文件，得到zip压缩包，这里推荐下载最新版本的Opencv，这里下载的是3.4.3版本，在安装前首先需要安装依赖包，在控制台输入： 123sudo apt-get install build-essentialsudo apt-get install cmake git libgtk2.0-dev pkg-confi">
+<meta name="twitter:description" content="通过安装在树莓派上的Opencv来进行图像处理">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -160,11 +161,15 @@ var _hmt = _hmt || [];
             <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-21T05:18:26.000Z">2019-08-21</time>
                 
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/树莓派/">树莓派</a>
+                </div>
+                
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    8 分钟 读完 (大约 1197 个字)
+                    8 分钟 读完 (大约 1215 个字)
                 </span>
                 
                 
@@ -177,7 +182,10 @@ var _hmt = _hmt || [];
             
         </h1>
         <div class="content">
-            <p><strong>1、树莓派上安装配置opencv</strong><br>     我们从 opencv官网下载source文件，得到zip压缩包，这里推荐下载最新版本的Opencv，这里下载的是3.4.3版本，在安装前首先需要安装依赖包，在控制台输入：</p>
+            <p>通过安装在树莓派上的Opencv来进行图像处理</p>
+<a id="more"></a>
+
+<p><strong>1、树莓派上安装配置opencv</strong><br>     我们从 opencv官网下载source文件，得到zip压缩包，这里推荐下载最新版本的Opencv，这里下载的是3.4.3版本，在安装前首先需要安装依赖包，在控制台输入：</p>
 <figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br><span class="line">sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev</span><br><span class="line">sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev\然后下载OpenCV3.2.0和OpenCV_contrib-3.2.0，下载需要等待一段时间</span><br></pre></td></tr></table></figure>
 
 <p>之后输入：</p>
@@ -189,8 +197,6 @@ var _hmt = _hmt || [];
 <figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo make install #执行安装</span><br></pre></td></tr></table></figure>
 
 <p>只要过一会就安装完成了。</p>
-<a id="more"></a>
-
 <p><strong>2、编写Opencv代码</strong><br>  代码如下：</p>
 <figure class="highlight cpp hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;opencv2/core/core.hpp&gt; </span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;opencv2/highgui/highgui.hpp&gt; </span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;opencv2/opencv.hpp&gt; </span></span></span><br><span class="line"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>; </span><br><span class="line"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> cv; </span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">fun2</span><span class="hljs-params">(Mat)</span></span>; </span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span></span><br><span class="line"><span class="hljs-function"></span>&#123; </span><br><span class="line">	Mat img = imread(<span class="hljs-string">"orgin.png"</span>);<span class="hljs-comment">//引入源图片文件 </span></span><br><span class="line">	<span class="hljs-keyword">if</span> (img.empty()) </span><br><span class="line">	&#123; </span><br><span class="line">		<span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<span class="hljs-comment">//若没有图片文件，则为退出 </span></span><br><span class="line">	&#125; </span><br><span class="line">	fun2(img);<span class="hljs-comment">//将源图片文件传入</span></span><br><span class="line">	fun2() namedWindow(<span class="hljs-string">"orgin"</span>);<span class="hljs-comment">//新建窗口 </span></span><br><span class="line">	imshow(<span class="hljs-string">"orgin"</span>,img);<span class="hljs-comment">//在orgin窗口下显示img </span></span><br><span class="line">	namedWindow(<span class="hljs-string">"new"</span>); </span><br><span class="line">	waitKey(<span class="hljs-number">0</span>); </span><br><span class="line">&#125; </span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">fun2</span><span class="hljs-params">(Mat img)</span> </span></span><br><span class="line"><span class="hljs-function"></span>&#123; </span><br><span class="line">	Mat element = getStructuringElement(MORPH_RECT, Size(<span class="hljs-number">15</span>, <span class="hljs-number">15</span>));<span class="hljs-comment">//图像处理的主要函数，函数的参数第一个为选择的样式，这里我选择的是MORPH_RECT样式，大小设置为15 </span></span><br><span class="line">	Mat dstimg; erode(img, dstimg, element);<span class="hljs-comment">//将源文件进行处理，生成新的图像文件 </span></span><br><span class="line">	imshow(<span class="hljs-string">"new"</span>, dstimg); </span><br><span class="line">	imwrite(<span class="hljs-string">"new.jpg"</span>, dstimg);<span class="hljs-comment">//将处理后的新图像文件保存为new.jpg </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -215,6 +221,15 @@ var _hmt = _hmt || [];
 
 <p>运行。运行结果如下：<br><img src="https://img-blog.csdnimg.cn/20181203220108420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25hb2htdXJkZXJlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Opencv/">Opencv</a>, <a class="has-link-grey -link" href="/tags/树莓派/">树莓派</a>
+                </div>
+            </div>
         </div>
         
         
@@ -321,7 +336,7 @@ var _hmt = _hmt || [];
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        4
+                        5
                     </p>
                 </div>
             </div>
@@ -331,7 +346,7 @@ var _hmt = _hmt || [];
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        0
+                        2
                     </p>
                 </div>
             </div>
@@ -341,7 +356,7 @@ var _hmt = _hmt || [];
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        0
+                        4
                     </p>
                 </div>
             </div>
@@ -436,13 +451,38 @@ var _hmt = _hmt || [];
                 分类
             </h3>
             <ul class="menu-list">
-            
+            <li>
+        <a class="level is-marginless" href="/categories/Java/">
+            <span class="level-start">
+                <span class="level-item">Spring</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/树莓派/">
+            <span class="level-start">
+                <span class="level-item">树莓派</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
             </ul>
         </div>
     </div>
 </div>
     
         
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Opencv/" style="font-size: 10px;">Opencv</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/树莓派/" style="font-size: 10px;">树莓派</a>
+    </div>
+</div>
+
     
     
         <div class="column-right-shadow is-hidden-widescreen ">
@@ -453,6 +493,25 @@ var _hmt = _hmt || [];
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/09/09/Spring学习日志-一-HelloWorld及Bean配置/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Spring学习日志(一)-HelloWorld及Bean配置">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-09T10:07:03.000Z">2019-09-09</time></div>
+                    <a href="/2019/09/09/Spring学习日志-一-HelloWorld及Bean配置/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Spring学习日志(一)-HelloWorld及Bean配置</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Java/">Spring</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -486,7 +545,7 @@ var _hmt = _hmt || [];
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-21T05:18:26.000Z">2019-08-21</time></div>
                     <a href="/2019/08/21/树莓派-Opencv（一）图像处理/" class="title has-link-black-ter is-size-6 has-text-weight-normal">树莓派+Opencv（一）图像处理</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/树莓派/">树莓派</a>
                     </p>
                 </div>
             </div>
@@ -543,6 +602,17 @@ var _hmt = _hmt || [];
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2019/08/">
                 <span class="level-start">
                     <span class="level-item">八月 2019</span>
@@ -565,6 +635,34 @@ var _hmt = _hmt || [];
                 标签
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Java/">
+                        <span class="tag">Java</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Opencv/">
+                        <span class="tag">Opencv</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Spring/">
+                        <span class="tag">Spring</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/树莓派/">
+                        <span class="tag">树莓派</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
             </div>
         </div>
@@ -591,6 +689,25 @@ var _hmt = _hmt || [];
         
         <article class="media">
             
+            <a href="/2019/09/09/Spring学习日志-一-HelloWorld及Bean配置/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Spring学习日志(一)-HelloWorld及Bean配置">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-09T10:07:03.000Z">2019-09-09</time></div>
+                    <a href="/2019/09/09/Spring学习日志-一-HelloWorld及Bean配置/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Spring学习日志(一)-HelloWorld及Bean配置</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Java/">Spring</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/08/21/树莓派-Opencv（二）中文字库/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="树莓派+Opencv（二）中文字库">
@@ -621,7 +738,7 @@ var _hmt = _hmt || [];
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-21T05:18:26.000Z">2019-08-21</time></div>
                     <a href="/2019/08/21/树莓派-Opencv（一）图像处理/" class="title has-link-black-ter is-size-6 has-text-weight-normal">树莓派+Opencv（一）图像处理</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/树莓派/">树莓派</a>
                     </p>
                 </div>
             </div>
@@ -678,6 +795,17 @@ var _hmt = _hmt || [];
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2019/08/">
                 <span class="level-start">
                     <span class="level-item">八月 2019</span>
@@ -700,6 +828,34 @@ var _hmt = _hmt || [];
                 标签
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Java/">
+                        <span class="tag">Java</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Opencv/">
+                        <span class="tag">Opencv</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Spring/">
+                        <span class="tag">Spring</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/树莓派/">
+                        <span class="tag">树莓派</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
             </div>
         </div>
